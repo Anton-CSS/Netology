@@ -19,6 +19,7 @@ html{
 }
 
 body{
+  min-width: 320px;
   font-family:'Open Sans', Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -33,6 +34,7 @@ h1,h2,h3,h4,h5,h6,p{
   position: relative;
   z-index: 2;
   background: url('../img/football_767.jpg') no-repeat top / cover;
+  padding-top: 4.5rem;
 }
 .header::before{
   content: '';
@@ -52,7 +54,6 @@ h1,h2,h3,h4,h5,h6,p{
   display: block;
   width: 19rem;
   margin: auto;
-  padding-top: 4.5rem;
   padding-bottom: 13.5rem;
   fill: #fff;
 }
@@ -123,6 +124,12 @@ font-weight: bold;
   margin-bottom: 0;
   font-size: calc(5.803vw + 4.5712px);
 }
+.section__img, .active__img--a {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
 .section__img--athlets{
   display: block;
   margin: auto;
@@ -146,6 +153,9 @@ font-weight: bold;
   width: 100%;
   object-fit: cover;
   object-position: top;
+}
+.menu__link{
+padding-bottom: 5rem;
 }
 .menu__link--gray{
   padding-top: 6rem;
@@ -201,7 +211,7 @@ font-weight: bold;
 }
 .menu__text {
   margin: 0;
-  padding: 2.7rem 2.6rem 5rem 2rem;
+  padding: 2.7rem 2.6rem 0 2rem;
   color: #000;
   font-size: calc(0.223vw + 13.2864px);
   letter-spacing: 0.75px;
@@ -335,7 +345,7 @@ font-weight: bold;
   }
   .button__text {
     vertical-align: middle;
-    margin-top: 13px;
+    margin-top: 1.3rem;
     font-size: 1.4rem;
     font-weight: 300;
   }
@@ -409,6 +419,7 @@ font-weight: bold;
 @media (min-width: 1280px) {
   .header{
     background: url('../img/football_1920.jpg') no-repeat top / cover;
+    padding-bottom: 11rem;
   }
   .header__logo{
     padding-bottom: 26.5rem;
@@ -417,15 +428,14 @@ font-weight: bold;
     font-size: 9rem;
     margin-left: 15.5rem;
     letter-spacing: 4.96px;
+    line-height: 6.2rem;
+    margin-bottom: 20rem;
   }
   .header__title span{
   margin-left: 44.9rem;
-  margin-top: -3rem;
-  margin-bottom: 20rem;
   }
   .header__box{
     flex-flow: row nowrap;
-    padding-bottom: 11rem;
     justify-content: center;
   }
   .header__button{
@@ -433,29 +443,36 @@ font-weight: bold;
     height: 7.7rem;
     margin-left: 5rem;
     margin-bottom: 0;
+    padding-top: 1rem;
     border-radius: 4rem;
+    padding-left: 5.7rem; 
   }
   .header__button:first-child{
     margin-left: 0;
+    padding-left: 3.8rem;
   }
   .button__icon{
-    vertical-align: bottom;
-    margin-top: 1rem;
+    vertical-align: middle;
     width: 4rem;
     height: 5rem;
-    margin-left: 5.7rem;
+    margin-left: 0;
   }
   .button__icon--a{
     width: 4.2rem;
     height: 4.8rem;
-    margin-left: 3.8rem;
   }
   .button__text{
+    max-width: 14.6rem;
     font-size: 1.4rem;
-    vertical-align: bottom;
+    vertical-align: middle;
+  }
+  .button__text--g{
+    max-width: 10.4rem;
   }
   .athlets{
     position: relative;
+    padding-top: 9rem;
+    margin: 0;
   }
   .section__img--athlets{
     position: absolute;
@@ -467,7 +484,7 @@ font-weight: bold;
   .section__title{
     margin-left: calc(50% + 60px);
     font-size: 8rem;
-    padding-top: 9rem;
+    padding-top: 0;
     margin-bottom: 7rem;
   }
   .menu__number{
@@ -485,7 +502,7 @@ font-weight: bold;
     max-width: 71.3rem;
     margin-left: calc(50% + 60px);
     padding-left: 0;
-    padding-top: 1.6rem;
+    margin-top: 1.6rem;
     font-size: 2rem;
     letter-spacing: 1px;
   }
@@ -500,13 +517,14 @@ font-weight: bold;
   }
   .players{
     margin-top: -30rem;
+    padding-top: 9rem;
     position: relative;
     overflow: hidden;
   }
   .section__img--players{
     position: absolute;
     top:1rem;
-    left: 27%;
+    left: 33%;
     width: 99.1rem;
     height: 81.5rem;
   }
@@ -518,7 +536,7 @@ font-weight: bold;
     padding-top: 5rem;
   }
   .menu__text--purple{
-    padding-bottom: 5.5rem;
+    padding-bottom: 0.5rem;
   }
   .menu__text--players{
     max-width: 77.3rem;
@@ -536,17 +554,24 @@ font-weight: bold;
   .active-wrap--right{
     order:1;
   }
+  .active__img{
+    height: 100%;
+  }
+  .active-wrap1{
+    padding-top: 22rem;
+    padding-left: 10%;
+  }
   .section__title--active{
-    margin-left: 13.4%;
+    margin: 0;
+    margin-bottom: 2.3rem;
     font-size: 8rem;
-    padding-top: 24rem;
+    padding: 0;
   }
   .menu__text--active{
+    margin: 0;
     font-size: 2.4rem;
-    margin-left: 13.4%;
   }
   .active__img{
-    height: 730px;
     object-position: right;
   }
   .active__img--right{
@@ -569,20 +594,25 @@ font-weight: bold;
     width: 3rem;
     height: 0.5rem;
   }
+  .footer{
+    padding-top: 25rem;
+  }
+  .footer__wrap{
+    display: flex;
+    justify-content: center;
+  }
   .footer__box{
-    top: 26rem;
-    left: 33%;
+    position: static;
+    margin: 0;
     width: 13rem;
     height: 13.7rem;
     border-radius: 3rem;
   }
   .footer__title{
+    padding: 0;
     text-align: left;
-    padding-top: 25rem;
-    margin-left: calc(50% + 160px);
     font-size: 8rem;
     letter-spacing: 4.41px;
-    transform: translateX(-50%);
     margin-bottom: 16rem;
   }
   .footer__title span{
