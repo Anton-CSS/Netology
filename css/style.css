@@ -65,7 +65,7 @@ h1,h2,h3,h4,h5,h6,p{
   text-transform: uppercase;
   letter-spacing: 1.54px;
 }
-.header__title span{
+.header__title--span{
  display: block;
  margin-top: 3rem;
  margin-left: 6.5rem;
@@ -79,19 +79,22 @@ h1,h2,h3,h4,h5,h6,p{
   padding-bottom: 8.5rem;
 }
 .header__button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 28rem;
   height: 3.5rem;
   border-radius: 17px 17px 18px;
   background-color: #5e42b0;
   margin-bottom: 1.5rem;
+  text-decoration: none;
+  padding: 0.8rem 8.5rem 0.8rem 8.2rem;
 }
 .button__icon{
   display: inline-block;
   width: 2rem;
   height: 2.4rem;
   color: #ffffff;
-  margin-top: 4px;
-  margin-left: 8.2rem;
 }
 .button__text {
   display: inline-block;
@@ -101,12 +104,12 @@ h1,h2,h3,h4,h5,h6,p{
   text-transform: uppercase;
   letter-spacing: 0.4px;
 }
-.button__text span{
+.button__text--span{
 font-weight: bold;
 }
 .athlets{
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
 }
 .section__title {
   padding-top: 2.5rem;
@@ -301,7 +304,7 @@ padding-bottom: 5rem;
   letter-spacing: 1.6px;
 }
 
-.footer__title span {
+.footer__title--span {
   display: block;
   margin-bottom: 7.5rem;
   color: #9b8ec1;
@@ -331,24 +334,31 @@ padding-bottom: 5rem;
     height: 8rem;
     box-shadow: 8px 14px 24px #0a0e34;
     border-radius: 4rem;
+    padding: 1.7rem 5rem 2.5rem 4.1rem;
+  }
+  
+  .header__button:last-child{
     margin-left: 3rem;
   }
-  .header__button:first-child{
-    margin-left: 0;
+  .header__button--a{
+    padding-left: 5.7rem;
+    padding-top: 2rem;
   }
   .button__icon{
-    vertical-align:  middle;
     width: 4.1rem;
     height: 4.5rem;
-    margin-left: 5rem;
-    margin-top: 1.3rem;
+    
   }
   .button__text {
-    vertical-align: middle;
-    margin-top: 1.3rem;
+    max-width: 14.3rem;
+    margin-left: 2.8rem;
     font-size: 1.4rem;
     font-weight: 300;
   }
+  .header__button--a .button__text {
+    max-width: 10.4rem;
+  }
+
   .athlets{
     position: relative;
   }
@@ -431,7 +441,7 @@ padding-bottom: 5rem;
     line-height: 6.2rem;
     margin-bottom: 20rem;
   }
-  .header__title span{
+  .header__title--span{
   margin-left: 44.9rem;
   }
   .header__box{
@@ -444,15 +454,14 @@ padding-bottom: 5rem;
     margin-left: 5rem;
     margin-bottom: 0;
     padding-top: 1rem;
-    border-radius: 4rem;
-    padding-left: 5.7rem; 
+    border-radius: 4rem; 
+    padding: 2rem 6.1rem 2.3rem 3.8rem;
   }
   .header__button:first-child{
     margin-left: 0;
     padding-left: 3.8rem;
   }
   .button__icon{
-    vertical-align: middle;
     width: 4rem;
     height: 5rem;
     margin-left: 0;
@@ -462,9 +471,9 @@ padding-bottom: 5rem;
     height: 4.8rem;
   }
   .button__text{
-    max-width: 14.6rem;
+    max-width: 16rem;
     font-size: 1.4rem;
-    vertical-align: middle;
+    
   }
   .button__text--g{
     max-width: 10.4rem;
@@ -516,7 +525,6 @@ padding-bottom: 5rem;
   margin-left: 9%;
   }
   .players{
-    margin-top: -30rem;
     padding-top: 9rem;
     position: relative;
     overflow: hidden;
@@ -608,6 +616,9 @@ padding-bottom: 5rem;
     height: 13.7rem;
     border-radius: 3rem;
   }
+  .button__text--footer{
+    max-width: 10.4rem;
+  }
   .footer__title{
     padding: 0;
     text-align: left;
@@ -615,7 +626,7 @@ padding-bottom: 5rem;
     letter-spacing: 4.41px;
     margin-bottom: 16rem;
   }
-  .footer__title span{
+  .footer__title--span{
     font-size: 3rem;
     text-align: left;
   }
